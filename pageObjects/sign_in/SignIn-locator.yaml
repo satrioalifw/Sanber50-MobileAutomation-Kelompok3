@@ -1,0 +1,4 @@
+signInBtn: com.example.myapplication:id/login
+username: com.example.myapplication:id/username
+password: com.example.myapplication:id/password
+loginBtn: com.example.myapplication:id/signIn
