@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.2 on win32)" generated="20231030 22:29:06.837" rpa="false" schemaversion="4">
+<suite id="s1" name="Loginsatrio" source="C:\Users\Satrio\Desktop\sanbercode\SanberQA\Sanber50-MobileAutomation-Kelompok3\suites\loginsatrio.robot">
+<test id="s1-t1" name="User Should Be Able Login Appears" line="9">
+<kw name="Open Flight Application" library="base">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=com.example.myapplication</arg>
+<arg>appActivity=com.example.myapplication.MainActivity</arg>
+<arg>appSigninActivity=com.example.myapplication.Login</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20231030 22:29:07.138" endtime="20231030 22:29:18.251"/>
+</kw>
+<status status="PASS" starttime="20231030 22:29:07.138" endtime="20231030 22:29:18.251"/>
+</kw>
+<kw name="Verify Login Page Appears" library="loginsatrio">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${Input_username}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20231030 22:29:18.255" level="FAIL">Variable '${Input_username}' not found.</msg>
+<status status="FAIL" starttime="20231030 22:29:18.253" endtime="20231030 22:29:18.255"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${Input_username}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="NOT RUN" starttime="20231030 22:29:18.255" endtime="20231030 22:29:18.255"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${Buttonsignin_login}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="NOT RUN" starttime="20231030 22:29:18.255" endtime="20231030 22:29:18.255"/>
+</kw>
+<status status="FAIL" starttime="20231030 22:29:18.252" endtime="20231030 22:29:18.256"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Buttonsignin}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20231030 22:29:18.256" endtime="20231030 22:29:18.256"/>
+</kw>
+<kw name="Input Username" library="loginsatrio">
+<arg>username_login=support@ngendigital.com</arg>
+<status status="NOT RUN" starttime="20231030 22:29:18.257" endtime="20231030 22:29:18.257"/>
+</kw>
+<kw name="Input Passwoord" library="loginsatrio">
+<arg>password_login=abc123</arg>
+<status status="NOT RUN" starttime="20231030 22:29:18.257" endtime="20231030 22:29:18.257"/>
+</kw>
+<kw name="Klik button signin to Login Page" library="loginsatrio">
+<status status="NOT RUN" starttime="20231030 22:29:18.258" endtime="20231030 22:29:18.258"/>
+</kw>
+<status status="FAIL" starttime="20231030 22:29:07.137" endtime="20231030 22:29:18.259">Variable '${Input_username}' not found.</status>
+</test>
+<status status="FAIL" starttime="20231030 22:29:06.839" endtime="20231030 22:29:18.260"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Loginsatrio">Loginsatrio</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231030 22:29:07.127" level="ERROR">Error in file 'C:\Users\Satrio\Desktop\sanbercode\SanberQA\Sanber50-MobileAutomation-Kelompok3\pageObjects\homePage\homePage.robot' on line 3: Processing variable file 'C:\Users\Satrio\Desktop\sanbercode\SanberQA\Sanber50-MobileAutomation-Kelompok3\pageObjects\homePage\homepage-locators.yaml' failed: Using YAML variable files requires PyYAML module to be installed. Typically you can install it by running `pip install pyyaml`.</msg>
+<msg timestamp="20231030 22:29:07.131" level="ERROR">Error in file 'C:\Users\Satrio\Desktop\sanbercode\SanberQA\Sanber50-MobileAutomation-Kelompok3\pageObjects\Login\loginsatrio.robot' on line 3: Processing variable file 'C:\Users\Satrio\Desktop\sanbercode\SanberQA\Sanber50-MobileAutomation-Kelompok3\pageObjects\Login\login_locator.yaml' failed: Using YAML variable files requires PyYAML module to be installed. Typically you can install it by running `pip install pyyaml`.</msg>
+</errors>
+</robot>
